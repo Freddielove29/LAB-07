@@ -81,6 +81,178 @@ class Operators {
     }
 }
 ```
+
+code
+```
+using System;
+namespace variableProperties
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Data type : int");
+            Console.WriteLine("Size :" + sizeof(int));
+            Console.WriteLine("Minimum Value :" + int.MinValue);
+            Console.WriteLine("Maximum Value :" + int.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : byte");
+            Console.WriteLine("Size :" + sizeof(byte));
+            Console.WriteLine("Minimum Value :" + byte.MinValue);
+            Console.WriteLine("Maximum Value :" + byte.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+          
+            Console.WriteLine("Data type : char");
+            Console.WriteLine("Size :" + sizeof(char));
+            Console.WriteLine("Minimum Value :" + (int)char.MinValue);
+            Console.WriteLine("Maximum Value :" + (int)char.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : bool");
+            Console.WriteLine("Size :" + sizeof(bool));
+            bool a = 2 < 3 ;
+            bool b = 2 > 3;
+            Console.WriteLine("2 < 3 : {0}", a);
+            Console.WriteLine("2 > 3 : {0}", b);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : sbyte");
+            Console.WriteLine("Size :" + sizeof(sbyte));
+            Console.WriteLine("Minimum Value :" + sbyte.MinValue);
+            Console.WriteLine("Maximum Value :" + sbyte.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : usort");
+            Console.WriteLine("Size :" + sizeof(ushort));
+            Console.WriteLine("Minimum Value :" + ushort.MinValue);
+            Console.WriteLine("Maximum Value :" + ushort.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : uint");
+            Console.WriteLine("Size :" + sizeof(uint));
+            Console.WriteLine("Minimum Value :" + uint.MinValue);
+            Console.WriteLine("Maximum Value :" + uint.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : float");
+            Console.WriteLine("Size :" + sizeof(float));
+            Console.WriteLine("Minimum Value :" + float.MinValue);
+            Console.WriteLine("Maximum Value :" + float.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : double");
+            Console.WriteLine("Size :" + sizeof(double));
+            Console.WriteLine("Minimum Value :" + double.MinValue);
+            Console.WriteLine("Maximum Value :" + double.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : decimal");
+            Console.WriteLine("Size :" + sizeof(decimal));
+            Console.WriteLine("Minimum Value :" + decimal.MinValue);
+            Console.WriteLine("Maximum Value :" + decimal.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : long");
+            Console.WriteLine("Size :" + sizeof(long));
+            Console.WriteLine("Minimum Value :" + long.MinValue);
+            Console.WriteLine("Maximum Value :" + long.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+            Console.WriteLine("Data type : ulong");
+            Console.WriteLine("Size :" + sizeof(ulong));
+            Console.WriteLine("Minimum Value :" + ulong.MinValue);
+            Console.WriteLine("Maximum Value :" + ulong.MaxValue);
+            Console.WriteLine("\n-------------------------------\n");
+
+
+
+
+        }
+    }
+}
+``` 
+ผลที่ได้
+
+``` 
+Data type : int
+Size :4
+Minimum Value :-2147483648
+Maximum Value :2147483647
+
+-------------------------------
+
+Data type : byte
+Size :1
+Minimum Value :0
+Maximum Value :255
+
+-------------------------------
+
+Data type : char
+Size :2
+Minimum Value :0
+Maximum Value :65535
+
+-------------------------------
+
+Data type : bool
+Size :1
+2 < 3 : True
+2 > 3 : False
+
+-------------------------------
+
+Data type : sbyte
+Size :1
+Minimum Value :-128
+Maximum Value :127
+
+-------------------------------
+
+Data type : usort
+Size :2
+Minimum Value :0
+Maximum Value :65535
+
+-------------------------------
+
+Data type : uint
+Size :4
+Minimum Value :0
+Maximum Value :4294967295
+
+-------------------------------
+
+Data type : float
+Size :4
+Minimum Value :-3.402823E+38
+Maximum Value :3.402823E+38
+
+-------------------------------
+
+Data type : double
+Size :8
+Minimum Value :-1.79769313486232E+308
+Maximum Value :1.79769313486232E+308
+
+-------------------------------
+
+Data type : decimal
+Size :16
+Minimum Value :-79228162514264337593543950335
+Maximum Value :79228162514264337593543950335
+
+-------------------------------
+
+Data type : long
+Size :8
+Minimum Value :-9223372036854775808
+Maximum Value :9223372036854775807
+
+-------------------------------
+
+Data type : ulong
+Size :8
+Minimum Value :0
+Maximum Value :18446744073709551615
+
+-------------------------------
+
+Press any key to continue . . .
+
+``` 
+
 ##สนุกกับการสร้างตัวเลขสุ่ม
  ในภาษา C# มีวิธีการสร้างตัวเลขสุ่ม (random number) โดยใช้คลาส Random มาสร้างเป็นตัวแปรโดยมีรูปแบบดังนี้
 ```csharp
@@ -118,6 +290,33 @@ namespace RandomNumber
 1. สร้างตัวแปร boolean โดยเก็บค่าที่ได้จากการเปรียบเทียบตัวเลขในข้อ 1 และ 2
 
 1. ให้พิมพ์ค่าตัวแปร boolean ในข้อ 3 ออกทางหน้าจอ
+
+code
+
+```
+using System;
+namespace RandomNumber
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int randomnumber = random.Next(0, 9);
+            Console.WriteLine("Random Number (0-9) : " + randomnumber);
+            int a = randomnumber;
+            Console.Write("Please Enter nnumber(0-9) : ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            bool c = a > b;
+            Console.Write(" {0} > {1} ", a, b);
+            Console.Write("Boolean : " + c);
+
+        }
+    }
+}
+
+```
+ผลที่ได้ ![](https://github.com/Freddielove29/LAB-07/blob/master/lab7.2.PNG?raw=true)
 
 
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
@@ -210,8 +409,160 @@ namespace thruthTable
 5. NOR
 6. Exclusive OR
 ```
+code
+```
+using System;
 
+namespace Lab7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool A, B, Y;
+            Console.WriteLine("      Y = A AND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("      Y = A OR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("      Y = NOT A");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !A;
+            Console.WriteLine(" {0}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("      Y = A NAND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A & B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("      Y = A NOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = !(A | B);
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("      Y = A XOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
 
+        
+        }
+    }
+}
+```
+
+ผลที่ได้
+```
+      Y = A AND B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | False
+ True   False   | False
+ True   True    | True
+-----------------------
+      Y = A OR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | True
+ True   False   | True
+ True   True    | True
+-----------------------
+      Y = NOT A
+-----------------------
+   A    |  Y
+-----------------------
+ False  | True
+ False  | True
+ True   | False
+ True   | False
+-----------------------
+      Y = A NAND B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | True
+ True   False   | True
+ True   True    | False
+-----------------------
+      Y = A NOR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | False
+ True   False   | False
+ True   True    | False
+-----------------------
+      Y = A XOR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | True
+ True   False   | True
+ True   True    | False
+-----------------------
+Press any key to continue . . .
+```
 
   2.2.2.	ชนิดข้อมูลตัวเลขจำนวนเต็ม (Integer Types)
 ข้อมูลชนิดตัวเลข สามารถนำไปใช้งานได้หลากหลาย เช่น การนับหรือแสดงจำนวน การกำหนดลำดับที่ การจัดลำดับ เป็นต้น ค่าที่ใส่ลงในตัวแปร เป็นได้ทั้งค่าบวก ค่าศูนย์ และค่าลบ (มีตัวแปรบางชนิดที่เก็บเฉพาะค่าบวกเพียงอย่างเดียว) การกำหนดค่าใดๆ ให้กับตัวแปร ทำได้โดยการใช้เครื่องหมาย =
@@ -251,6 +602,69 @@ public class intergerTest
 8.	9/2*a
 9.	y%8
 10.	100*x+y%2-a
+
+```
+
+code
+```
+using System;
+
+
+namespace LAB7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float a = 10, b = 20, x = 5, y = 2;
+
+            Console.WriteLine("a = 10, b = 20, x = 5, y = 2");
+            Console.WriteLine("--------------------------");
+
+            Console.Write("a+b = {0} + {1}", a, b);
+            Console.WriteLine(" = {0}", a + b);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("x-b = {0} - {1}", x, b);
+            Console.WriteLine(" = {0}", x - b);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("x*b = {0} * {1}", x, b);
+            Console.WriteLine(" = {0}", x * b);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("y/a = {0} / {1}", y, a);
+            Console.WriteLine(" = {0}", y / a);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("b%y = {0} % {1}", b, y);
+            Console.WriteLine(" = {0}", b % y);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("y+10%x  = {0} + 10 % {1}", y, x);
+            Console.WriteLine("  = {0}", y + 10 % x);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("a/3*5 = {0} / 3 * 5", a);
+            Console.WriteLine(" = {0}", a / 3 * 5);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("9/2*a = 9 / 2 * {0}", a);
+            Console.WriteLine(" = {0}", 9 / 2 * a);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("y%8 = {0} % 8", y);
+            Console.WriteLine(" = {0}", y % 8);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("100*x+y%2-a = 100 * {0} + {1} % 2 - {2}", x, y, a);
+            Console.WriteLine(" = {0}", 100 * x + y % 2 - a);
+            Console.WriteLine("--------------------------");
+
+
+        }
+    }
+}
 ```
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
@@ -300,14 +714,92 @@ SunToEarthTimeOfLight = 8.33333333333333 minutes
 
 ดาวเคราะห์ | ระยะทางจากดวงอาทิตย์ | ระยะทางในหน่วย A.U. | เวลาของแสง (นาที)
 :----:|:----:|:----:|:----: 
-Mercury |	57,910,000 km		
-Venus |	108,200,000 km		
-Earth |	149,600,000 km		
-Mars |	227,940,000 km		
-Jupiter |	778,330,000 km		
-Uranus |	2,873,550,000 km		
-Neptune |	4,501,000,000 km		
-Pluto |	5,945,900,000 km		
+Mercury |	57,910,000 km | 0.386920491854452 A.U.	| 3.22433743212043 minutes
+Venus |	108,200,000 km  | 0.722928634409457 A.U. | 6.02440528674548 minutes
+Earth |	149,600,000 km	| 0.999539036115109 A.U. | 8.32949196762591 minutes
+Mars |	227,940,000 km	| 1.5229607479417 A.U. | 12.6913395661808 minutes
+Jupiter |	778,330,000 km	| 5.20034236617295 A.U.	| 43.3361863847746 minutes
+Uranus |	2,873,550,000 km | 19.1993676285332 A.U. | 159.994730237777 minutes	
+Neptune |	4,501,000,000 km | 30.0730294221531 A.U. | 250.608578517943 minutes	
+Pluto |	5,945,900,000 km | 39.7269996981071 A.U. | 331.058330817559 minutes
+
+code
+```
+using System;
+
+namespace Lab7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const double lightSpeed = 186000d;
+            const double Astronomicalunit = 93000000d;
+            const double mileTokm = 1.609344;
+
+            Console.WriteLine("Mercury");
+            const double mercury = 57910000d;
+            Console.WriteLine("lengthtosun : {0} km", mercury / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (mercury / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((mercury / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Venus");
+            const double Venus = 108200000d;
+            Console.WriteLine("lengthtosun : {0} km", Venus / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Venus / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Venus / mileTokm) / lightSpeed) / 60);
+            
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Earth");
+            const double Earth = 149600000d;
+            Console.WriteLine("lengthtosun : {0} km", Earth / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Earth / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Earth / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Mars");
+            const double Mars = 227940000d;
+            Console.WriteLine("lengthtosun : {0} km", Mars / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Mars / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Mars / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Jupiter");
+            const double Jupiter = 778330000d;
+            Console.WriteLine("lengthtosun : {0} km", Jupiter / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Jupiter / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Jupiter / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Uranus");
+            const double Uranus = 2873550000d;
+            Console.WriteLine("lengthtosun : {0} km", Uranus / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Uranus / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Uranus / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Neptune");
+            const double Neptune = 4501000000d;
+            Console.WriteLine("lengthtosun : {0} km", Neptune / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Neptune / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Neptune / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Pluto");
+            const double Pluto = 5945900000d;
+            Console.WriteLine("lengthtosun : {0} km", Pluto / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Pluto / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Pluto / mileTokm) / lightSpeed) / 60);
+
+
+
+        }
+    }
+}
+```
+ผลที่ได้
+![](https://github.com/Freddielove29/LAB-07/blob/master/lab7.4.PNG?raw=true)
 
 ##คลาส Math 
 ในภาษา C# มีคลาสที่เป็นตัวช่วยคำนวณทางคณิตศาสตร์ ที่ช่วยให้เราสามารถคำนวณฟังก์ชันพื้นฐานได้ อย่างรวดเร็ว ไม่ต้องพัฒนาโปรแกรมเพิ่มเติมด้วยเอง นั่นคือคลาส Math  ฟังก์ชันทางคณิตศาสตร์ที่ใช้บ่อยๆ สามารถดูรายละเอียดทั้งหมดได้จาก 
@@ -334,7 +826,7 @@ public class MathTest
 }
 ```
 
-ผลที่ได้
+
 
 ```
 The sine of       0.00 = 0.000000            *
@@ -367,4 +859,71 @@ The sine of       6.00 = -0.279415         *
 2.	y = cos(x)
 3.	y = tan(x)
 ```
-	
+y = x2
+
+```using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(i * i) + "*", i, i * i);
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val) + 10);
+        return SpaceString;
+    }
+}	
+```
+![](https://github.com/Freddielove29/LAB-07/blob/master/lab7.5.PNG?raw=true)
+
+y = cos(x)
+```
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Cos(i)) + "*", i, Math.Cos(i));
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val * 5.0) + 10);
+        return SpaceString;
+    }
+}
+```
+
+![](https://github.com/Freddielove29/LAB-07/blob/master/lab7.6.PNG?raw=true)
+y = tan(x)
+
+```
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Tan(i)) + "*", i, Math.Tan(i));
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val) + 25);
+        return SpaceString;
+    }
+}
+```
+
+![](https://github.com/Freddielove29/LAB-07/blob/master/lab7.3.PNG?raw=true)
+
